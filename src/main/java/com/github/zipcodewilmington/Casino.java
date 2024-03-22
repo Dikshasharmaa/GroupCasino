@@ -5,8 +5,8 @@ import com.github.zipcodewilmington.casino.CasinoAccountManager;
 import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
 
-//import com.github.zipcodewilmington.casino.games.Backjack.Blackjack;
-//import com.github.zipcodewilmington.casino.games.Backjack.BlackjackPlayer;
+import com.github.zipcodewilmington.casino.games.Backjack.Blackjack;
+import com.github.zipcodewilmington.casino.games.Backjack.BlackjackPlayer;
 import com.github.zipcodewilmington.casino.games.craps.CrapsGame;
 import com.github.zipcodewilmington.casino.games.craps.CrapsPlayer;
 
@@ -49,7 +49,7 @@ public class Casino implements Runnable {
                             play(new SlotsGame(), new SlotsPlayer());
                         } else if (gameSelectionInput.equals("NUMBERGUESS")) {
 
-                            play(new NumberGuessGame(), new NumberGuessPlayer());
+                            play(new NumberGuessGame(casinoAccount,null), new NumberGuessPlayer(casinoAccount));
                         }
                         //else if (gameSelectionInput.equals("BLACKJACK")) {
                             //play(new Blackjack(casinoAccount, null), new BlackjackPlayer(casinoAccount));
@@ -102,7 +102,7 @@ public class Casino implements Runnable {
                 .append("Welcome to the Game Selection Dashboard!")
                 .append("\nFrom here, you can select any of the following options:")
 
-                .append("\n\t[ SLOTS ], [ NUMBERGUESS ], [ BLACKJACK ], [ CRAPS ], [ EXIT ]")
+                //.append("\n\t[ SLOTS ], [ NUMBERGUESS ], [ BLACKJACK ], [ CRAPS ], [ EXIT ]")
 
                 .append("\n\t[ SLOTS ], [ NUMBERGUESS ], [ BLACKJACK ], [BINGO], [ROULETTE], [EXIT]")
 
@@ -119,4 +119,4 @@ public class Casino implements Runnable {
 
 }
 
-}
+

@@ -66,8 +66,13 @@ public class Bingo implements GameInterface {
         while(this.getWinner()!= true){
             Integer calledNumber = this.announceNumber();
             System.out.println("Called Number: "+ calledNumber);
+
             for(BingoPlayer bPlayer :playerList){
+
                 System.out.println(bPlayer.getBingoCard());
+                System.out.println("READY! Enter yes to get next number");
+                Scanner sc = new Scanner(System.in);
+                String userInput = sc.next();
             }
         }
     }

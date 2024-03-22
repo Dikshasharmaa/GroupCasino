@@ -4,12 +4,6 @@ package com.github.zipcodewilmington.casino.games.numberguess;
 import java.util.Random;
 import java.util.Scanner;
 
-/**
- * Created by leon on 7/21/2020.
- */
-public class NumberGuessGame {
-}
-
 import com.github.zipcodewilmington.casino.CasinoAccount;
 import com.github.zipcodewilmington.casino.GameInterface;
 import com.github.zipcodewilmington.casino.PlayerInterface;
@@ -51,6 +45,7 @@ public class NumberGuessGame implements GameInterface {
                 "⠀⠀⠀⠀⠀⠀⣾⣿⣿⣿⣦⠀⠀⠀⠀⠀⠀\n" +
                 "⠀⠀⠀⠀⠀⠀⢿⣿⣿⣿⠟⠀⠀⠀⠀⠀⠀\n" +
                 "⠀⠀⠀⠀⠀⠀⠀⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀");
+        System.out.println("\uD83E\uDD14\uD83D\uDCAD¿?");
         System.out.println("Feeling lucky?? Ok, I'm thinking of a number between 0 and 10");
         while (true) {
             System.out.println("Enter your guess :");
@@ -78,5 +73,3 @@ public class NumberGuessGame implements GameInterface {
 
     }
 }
-
-
